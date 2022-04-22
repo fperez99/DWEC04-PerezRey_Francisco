@@ -37,6 +37,27 @@
       this.curso = curso;
       this.grupo = grupo;
     };
+
+    Estudiante.prototype.registrar = function () {};
+
+    //Instancia del objeto Estudiante
+    var ficha1 = new Estudiante("Fran", "23", "masculino", "2º", "tarde");
+    ficha1.obtDetalles();
+
+    Estudiante.prototype.obtDetalles = function () {
+      console.log(
+        "Nombre: " +
+          this.nombre +
+          " Edad: " +
+          this.edad +
+          " Género: " +
+          this.genero +
+          " Curso: " +
+          this.curso +
+          " Grupo: " +
+          this.grupo
+      );
+    };
   </script>
   <body></body>
 </html>
