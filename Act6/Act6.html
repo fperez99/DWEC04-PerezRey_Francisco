@@ -16,6 +16,21 @@
     //Cargamos los datos
     var ficha = new Persona("Fran", "23", "masculino");
     ficha.obtDetalles();
+
+    //Imprimimos por pantalla los datos de Persona
+    Persona.prototype.obtDetalles = function () {
+      document.write(
+        "Nombre: " +
+          this.nombre +
+          "<br>" +
+          "Edad: " +
+          this.edad +
+          "<br>" +
+          "Género: " +
+          this.genero +
+          "<br>"
+      );
+    };
   </script>
   <body></body>
 </html>
