@@ -17,6 +17,7 @@
         [20, 18, 15],
       ];
       let arrayBidimensional = [];
+      let ultimoarray;
 
       //Esta funcion transforma el array principal en un array bidimensional pero con datos String
       function transformarArray(arr) {
@@ -24,6 +25,11 @@
       }
 
       arrayBidimensional = transformarArray(arrayprincipal);
+
+      //Transformamos el array de string en un array de datos numericos y los metemos en nuestro ultimo array
+      let datoNumero = arrayBidimensional.forEach((elemento) => {
+        ultimoarray.push(Number(elemento));
+      });
     </script>
   </body>
 </html>
