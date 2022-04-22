@@ -13,6 +13,18 @@
     let total = 0;
     let resultados = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     let i;
+
+    function tiradaDado() {
+      dado1 = parseInt(6 * Math.random() + 1);
+      dado2 = parseInt(6 * Math.random() + 1);
+      sum = dado1 + dado2;
+      return sum;
+    }
+
+    for (i = 1; i <= 36000; i++) {
+      let tirada = tiradaDado();
+      resultados[tirada]++;
+    }
   </script>
   <body></body>
 </html>
