@@ -17,6 +17,20 @@
           this.fechaNacimiento = Date(fechaNacimiento);
         }
       }
+
+      //Clase CEO con sus propiedades y metodos propios
+      class CEO extends Trabajador {
+        constructor(
+          id,
+          nombre,
+          apellidos,
+          fechaNacimiento,
+          jefesAsignados = []
+        ) {
+          super(id, nombre, apellidos, fechaNacimiento);
+          this.jefesAsignados = jefesAsignados;
+        }
+      }
     </script>
   </body>
 </html>
