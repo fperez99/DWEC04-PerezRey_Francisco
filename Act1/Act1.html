@@ -50,11 +50,19 @@
         }
       }
 
+      //Reseteamos la puntuacion del jugador
+      function resetear(jugador) {
+        jugador.puntuacion = 1;
+        alert("El jugador se ha reseteado");
+      }
+
       //Le restamos puntos al jugador
       function restarPuntos(jugador) {
         jugador.puntuacion = jugador.puntuacion - 1;
         if (jugador.puntuacion % 10 == 0) {
           jugador.nivel = jugador.nivel - 1;
+        } else if (jugador.puntuacion == 0) {
+          resetear(jugador);
         }
       }
     </script>
