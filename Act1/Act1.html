@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      //creamos la funcion para la creacion de los jugadores
       function Jugador(nombre, apellido, empleo) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -15,6 +16,10 @@
         this.nivel = 1;
         this.puntuacion = 1;
       }
+
+      //creamos los jugadores
+      let jugador1 = new Jugador("Francisco", "Perez", "Desarrollador");
+      let jugador2 = new Jugador("Marta", "Sanchez", "Arquitecta");
     </script>
   </body>
 </html>
