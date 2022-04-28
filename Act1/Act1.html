@@ -20,6 +20,26 @@
       //creamos los jugadores
       let jugador1 = new Jugador("Francisco", "Perez", "Desarrollador");
       let jugador2 = new Jugador("Marta", "Sanchez", "Arquitecta");
+
+      Jugador.prototype.toString = function jugadortoString() {
+        let retornar =
+          "Nombre: " +
+          this.nombre +
+          "Apellido: " +
+          this.apellido +
+          "Empleo: " +
+          this.empleo +
+          "Nivel: " +
+          this.nivel +
+          "Puntuacion: " +
+          this.puntuacion;
+        return retornar;
+      };
+
+      document.write(jugador1.toString());
+      document.write(jugador2.toString());
+      console.log(jugador1.toString());
+      console.log(jugador2.toString());
     </script>
   </body>
 </html>
