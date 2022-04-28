@@ -49,6 +49,14 @@
           jugador.nivel = jugador.nivel + 1;
         }
       }
+
+      //Le restamos puntos al jugador
+      function restarPuntos(jugador) {
+        jugador.puntuacion = jugador.puntuacion - 1;
+        if (jugador.puntuacion % 10 == 0) {
+          jugador.nivel = jugador.nivel - 1;
+        }
+      }
     </script>
   </body>
 </html>
