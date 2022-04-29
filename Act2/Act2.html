@@ -59,6 +59,12 @@
           }
         }
 
+        //resetar puntos de un jugador
+        resetear() {
+          this.setPuntuacion = 1;
+          alert("El jugador se ha reseteado");
+        }
+
         restarPuntos() {
           this.setPuntuacion = this.setPuntuacion - 1;
           if (this.getPuntuacion % 10 == 0) {
