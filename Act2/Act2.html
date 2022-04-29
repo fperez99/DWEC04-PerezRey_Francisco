@@ -58,6 +58,13 @@
             this.setNivel = this.setNivel + 1;
           }
         }
+
+        restarPuntos() {
+          this.setPuntuacion = this.setPuntuacion - 1;
+          if (this.getPuntuacion % 10 == 0) {
+            Jugador.nivel = Jugador.nivel - 1;
+          }
+        }
       }
     </script>
   </body>
