@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      //funcion que llama a si mismo
       function recursiva(numero) {
         let cadena = "bauuuba";
         if (numero <= 0) {
@@ -15,8 +16,11 @@
         }
         return cadena + " " + recursiva(numero - 1);
       }
-
+      //Pedimos al usuario cuantas veces quiere que se repita la cadena
       let numero = +prompt("Introduce el numero que quieras repetir la cadena");
+
+      //imprimimos por pantalla las veces que el usuario nos indica por teclado
+      document.write(recursiva(numero));
     </script>
   </body>
 </html>
