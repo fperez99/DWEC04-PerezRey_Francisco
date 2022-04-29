@@ -48,6 +48,14 @@
         getPuntuacion() {
           return this.puntuacion;
         }
+
+        //Para que el jugador suba de puntos y de nivel
+        sumarPuntos() {
+          this.setPuntuacion = this.setPuntuacion + 1;
+          if (this.getPuntuacion % 10 == 0) {
+            this.setNivel = this.setNivel + 1;
+          }
+        }
       }
     </script>
   </body>
