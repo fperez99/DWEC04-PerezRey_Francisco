@@ -7,6 +7,14 @@
     <title>Actividad 3</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function recursiva(numero) {
+        let cadena = "bauuuba";
+        if (numero <= 0) {
+          return "";
+        }
+        return cadena + " " + recursiva(numero - 1);
+      }
+    </script>
   </body>
 </html>
