@@ -42,6 +42,49 @@
           alert("Estamos dirigiendo!");
         }
       }
+
+      class Jefe extends Trabajador {
+        constructor(
+          id,
+          nombre,
+          apellidos,
+          fechaNacimiento,
+          dptoResponsable,
+          equipo = []
+        ) {
+          super(id, nombre, apellidos, fechaNacimiento);
+          this.dptoResponsable = String(dptoResponsable);
+          this.equipo = equipo;
+        }
+
+        anadirAlEquipo(programador) {
+          this.equipo.push(programador);
+        }
+
+        reunirseConEquipo() {
+          alert("Estamos reunidos");
+        }
+      }
+
+      //Clase Programador con sus propiedades y metodos propios
+      class Programador extends Trabajador {
+        constructor(
+          id,
+          nombre,
+          apellidos,
+          fechaNacimiento,
+          titulacion,
+          experiencia
+        ) {
+          super(id, nombre, apellidos, fechaNacimiento);
+          this.titulacion = String(titulacion);
+          this.experiencia = parseInt(experiencia);
+        }
+
+        programar() {
+          alert("Estamos rogramando");
+        }
+      }
     </script>
   </body>
 </html>
