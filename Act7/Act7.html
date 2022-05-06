@@ -85,6 +85,28 @@
           alert("Estamos rogramando");
         }
       }
+
+      var ceo1 = new CEO(123, "Fran", "Perez Rey", "17/01/99");
+      var jefe1 = new Jefe(987, "Marta", "Sanchez Sanchez", "13/11/80", "BBDD");
+      var programador1 = new Programador(
+        456,
+        "Esteban",
+        "Fopiana Candon",
+        "12/02/79",
+        "Ingeniero",
+        2
+      );
+
+      //diferentes test para comprobar por consola que esta todo correcto
+      console.log(ceo1);
+      console.log(jefe1);
+      console.log(programador1);
+
+      jefe1.anadirAlEquipo(programador1);
+      console.log(jefe1);
+
+      ceo1.anadirJefe(jefe1);
+      console.log(ceo1);
     </script>
   </body>
 </html>
