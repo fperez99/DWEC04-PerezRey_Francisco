@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      //Clase Jugador
       class Jugador {
         constructor(nombre, apellido, empleo, nivel = 1, puntuacion = 1) {
           this.nombre = nombre;
@@ -72,6 +73,22 @@
           } else if (this.getPuntuacion == 0) {
             resetear();
           }
+        }
+
+        //metodo toString
+        toString() {
+          let retorno =
+            "nombre: " +
+            this.nombre +
+            " apellido: " +
+            this.apellido +
+            " empleo: " +
+            this.empleo +
+            " nivel: " +
+            this.nivel +
+            " puntuacion: " +
+            this.puntuacion;
+          return retorno;
         }
       }
 

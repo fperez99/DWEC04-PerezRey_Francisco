@@ -30,6 +30,17 @@
           super(id, nombre, apellidos, fechaNacimiento);
           this.jefesAsignados = jefesAsignados;
         }
+        viajar() {
+          alert("Viajamos!!");
+        }
+
+        anadirJefe(jefe) {
+          this.jefesAsignados.push(jefe);
+        }
+
+        dirigirJefes() {
+          alert("Estamos dirigiendo!");
+        }
       }
     </script>
   </body>

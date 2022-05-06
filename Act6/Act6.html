@@ -13,9 +13,6 @@
       this.edad = edad;
       this.genero = genero;
     }
-    //Cargamos los datos
-    var ficha = new Persona("Fran", "23", "masculino");
-    ficha.obtDetalles();
 
     //Imprimimos por pantalla los datos de Persona
     Persona.prototype.obtDetalles = function () {
@@ -32,17 +29,15 @@
       );
     };
 
+    //Cargamos los datos
+    var ficha = new Persona("Fran", "23", "Masculino");
+    ficha.obtDetalles();
+
     var Estudiante = function (nombre, edad, genero, curso, grupo) {
       Persona.call(this, nombre, edad, genero);
       this.curso = curso;
       this.grupo = grupo;
     };
-
-    Estudiante.prototype.registrar = function () {};
-
-    //Instancia del objeto Estudiante
-    var ficha1 = new Estudiante("Fran", "23", "masculino", "2º", "tarde");
-    ficha1.obtDetalles();
 
     Estudiante.prototype.obtDetalles = function () {
       console.log(
@@ -58,6 +53,45 @@
           this.grupo
       );
     };
+
+    Estudiante.prototype.registrar = function () {};
+
+    //Instancia del objeto Estudiante
+    var ficha1 = new Estudiante("Fran", "23", "Masculino", "2º", "Tarde");
+    ficha1.obtDetalles();
+
+    Estudiante.prototype = Object.create(Persona.prototype);
+    Estudiante.prototype.constructor = Estudiante;
+
+    //Objeto Profesor que hereda de Persona
+    var Profesor = function (nombre, edad, genero, modulo, nivel) {
+      Persona.call(this, nombre, edad, genero);
+      this.modulo = modulo;
+      this.nivel = nivel;
+    };
+    Profesor.prototype.obtDetalles = function () {
+      console.log(
+        "Nombre: " +
+          this.nombre +
+          " Edad: " +
+          this.edad +
+          " Género: " +
+          this.genero +
+          " Modulo: " +
+          this.modulo +
+          " Nivel: " +
+          this.nivel
+      );
+    };
+
+    Profesor.prototype.asignar = function () {};
+
+    //Instancia del objeto Profesor
+    var ficha1 = new Profesor("Ramon", "18", "Masculino", "Derecho", "Grado");
+    ficha1.obtDetalles();
+
+    Profesor.prototype = Object.create(Persona.prototype);
+    Profesor.prototype.constructor = Profesor;
   </script>
   <body></body>
 </html>
